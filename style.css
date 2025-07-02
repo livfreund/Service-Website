@@ -1,0 +1,207 @@
+/*this is a CSS comment */
+
+/*import a modern google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #333333;
+    color: #000000; /*we can look up "color picker tool" to select a color and get its HEX, RGB, or HSL values*/ 
+    text-align: center;
+    padding: 20px;
+    margin: 0; /*removing default margin*/
+}
+
+/*"Services We Offer*/
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/*"Selected Services"*/
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/*dynamically referenced in script. h3 is the service title*/
+h3 {
+    font-size: 1.0em;
+    margin: 0;
+    padding: 5px, 0; 
+    color: #FFFFFF;
+    text-align: center;
+    display: inline-block;
+    width: auto; /*allows h3 to only take up necessary space*/
+    margin-left: 20%;
+}
+
+/*containing service titles and the drop down/add button together*/
+.category-container {
+    display: flex;
+    align-items: center; /*align the title and dropdown vertically*/
+    justify-content: space-between; /*puts "space between" the first item and the last time...one aligned to the left and the other aligned to the right*/
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #333333;
+}
+
+.category-title {
+    font-size: 1.2em;
+    color: #FFFFFF;
+    margin-right: 15px; /*adds space between the title and dropdown*/
+}
+
+.dropdown-button-container {
+    display: flex; /*this will ensure the dropdown is placed next to the title*/
+    align-items: center; /*align the dropdown vertically*/
+    margin-right: 20%; 
+}
+
+select {
+    padding: 5px 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; 
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #631679;
+}
+
+/* a . is used to target classes. we're telling the browser to apply styles to any element with the class remove-button*/
+.remove-button {
+    font-size: 1em; 
+    padding: 5px 8px; /*top/bottom, left/right*/
+    border-radius: 5px; /*for rounded corners*/
+    background-color: #ff4c4c; 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: #e00000; /*change button color when hovered*/
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: white;
+    padding: 8px;
+    margin: 3px auto;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*the word of subtotal*/
+.p1 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+/*span lets us style just the subtotal number*/
+span#subtotal {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #34940E;
+}
+
+/*the hashtag is used  to select element by ID. service-selectors is the specific ID name of the element*/
+#service-selectors {
+    max-width: 500px;
+    margin: auto;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-label {
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+}
+
+.service-select {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+/* Fixed position container at the bottom of the screen */
+#selected-services-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333333;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#selected-services-container p strong {
+    color: #FFFFFF; /* Makes "Subtotal:" white */
+    font-size: 30px;
+}
+
+#selected-services-container p:has(span#total-hours) {
+    display: none;
+}
+
+/* Optional styling for the selected services section */
+#selected-services-container h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000000
+}
+
+#selected-services-container p {
+    font-size: 0.8em; /* Makes the text smaller */
+    margin-top: 0; /* Adds some space above the paragraph to position it nicely below the "Selected Services" heading */
+    color: #ffffff
+}
+
+#service-list {
+    max-height: 200px; /*limit the height of the list */
+    overflow-y: auto; /*enable scrolling for the list */
+}
