@@ -1,0 +1,44 @@
+<!-- creating a website that lists a bunch of services we offer with a drop-down menu 
+(we dont have the names yet, just make them up for now) and adds up the prices to give a subtotal.
+edit: like 5 drop down menus bc we have like 200 services -->
+
+<!-- new changes!!!! title each categroies of options. ability to delete specific services that were added. 
+ each service will have a hour variable attatched. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--this specifies the character encoding for the webpage. 
+    it tells the browser to use UTF-8, a universal character edcoding that supports almost all characters, 
+    icluding special symbbols and different langauges-->
+    <meta charset="UTF-8">
+    <!--'viewport' helps make the webpage look good on all screen sizes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundry Services Offered</title>
+    <link href="style.css" type="text/css" rel="stylesheet" /> <!--styling the webpage-->
+</head>
+
+<body>
+
+    <h1><u>Services We Offer</u></h1>
+
+    <!--div groups elements. this helps with styling and javascript interaction-->
+    <div id="service-selectors"></div>
+    <div id="category-container"></div>
+
+    <!-- Selected Services Section (fixed at the bottom) -->
+    <div id="selected-services-container">
+        <h2>Selected Services</h2>
+        <p>If the service you are looking for is not listed, please email nathaniel.bryant@uni.edu.</p>
+        <ul id="service-list"></ul>
+        <p><strong>Subtotal: $<span id="subtotal">0</span></strong></p>
+        <p><strong>Total Hours: <span id="total-hours">0</span></strong></p>
+    </div>
+
+    <script src="script.js"></script> <!--integrates js page-->
+
+    
+
+</body>
+</html>
